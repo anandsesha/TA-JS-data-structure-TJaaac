@@ -57,7 +57,7 @@ console.log(colors.length)
 
 // 15. Remove the second color from the end of list.
 
-delete colors[4];
+delete colors[colors.length-2];
 
 // 16. Write a for loop to iterate through every element in the array and print each element to the console.
 

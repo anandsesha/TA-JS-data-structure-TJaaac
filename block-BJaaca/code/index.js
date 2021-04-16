@@ -8,7 +8,10 @@ let character = {}
 
 //  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
 
-character.characterName = "Arya"
+// character.characterName = "Arya"
+character = {
+    characterName : "Arya"
+}
 
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
@@ -26,7 +29,7 @@ character.title = "Lady of Winterfell"
 
 // - Add another property named `greet` and value should be a function when called should alert `I am [NAME HERE] and my title is [TITLE HERE]`.
 
-character.greet = function alertInfo(){
+character.greet = function(){
     alert(`I am ${character.characterName} and my title is ${character.title}`);
 }
 
@@ -42,7 +45,7 @@ character.greet();
 
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
 
-character.greet = function alertInfo(){
+character.greet = function(){
     alert(`She is ${character.characterName} and her title is ${character.title}`);
 } 
 
@@ -69,11 +72,11 @@ character.changeIsAdult = () => {
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
-character.playedBy = "Maisie Williams"
+character[keyName] = "Maisie Williams"
 
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
 
-alert(character.playedBy);
+alert(character[keyName]);
 
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 
@@ -85,4 +88,4 @@ character.totalSeasons = 1 + 2 + 3 + 2;
 
 // - Access the value of the key `totalSeason` (it should be 8)
 
-character.totalSeasons
+console.log(character.totalSeasons);

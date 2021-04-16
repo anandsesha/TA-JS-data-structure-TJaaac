@@ -68,19 +68,17 @@ console.log(odd);
 
 // 8. Find the numbers in the array that is divisible by 5 and print them to the console using console.log()
 
-// let isDivisibleBy5 = [];
-// for(let numb in numbers){
-//     if(numb%5==0){
-//         isDivisibleBy5.push(numb);
-//     }
-// }
-// console.log(isDivisibleBy5);
-
-for(let i=0;i<numbers.length;i++){
-    if(numbers[i]%5 == 0){
-        console.log(numbers[i]);
+for(let numb of numbers){
+    if(numb%5==0){
+        console.log(numb);
     }
 }
+
+// for(let i=0;i<numbers.length;i++){
+//     if(numbers[i]%5 == 0){
+//         console.log(numbers[i]);
+//     }
+// }
 
 // 9. Log all the element of the array one by one
 

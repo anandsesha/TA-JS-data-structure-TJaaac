@@ -36,7 +36,7 @@ var person2 = personDetails(person1);
 console.log(person1); // {name: "Alex", age: 25}
 console.log(person2); // {name: "John", age: 50}
 ```
-The memory diagram is added above. As Shown, firstly, person1 variable will create a new memory location say 101, and store its object value there. Later when person2 is created, the function personDetails will be called and as it accepts a parameter `person`, here we have passed the variable person1 through person parameter. So the person1's object will be passed to the function and this object's age will be updated first to 25 and later, both name and age will be updated to `John` and `50` and this will be returned. Therefore person2 will create a fresh memory location (say 102) as it is a new variable and has a value of non-primitive type, and store the value there.  
+The memory diagram is added above. As Shown, firstly, person1 variable will create a new memory location say 101, and store its object value there. Later when person2 is created, the function personDetails will be called and as it accepts a parameter `person`, here we have passed the variable person1 through person parameter. So the person1's object will be passed to the function and this object's name and age will be updated to `John` and `50` and this will be returned. Also person1's age will be update to 25 in memory location 101. Therefore person2 will create a fresh memory location (say 102) as it is a new variable and has a value of non-primitive type, and store the value there.  
 
 
 3. What will be the output of the below code:

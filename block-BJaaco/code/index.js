@@ -3,7 +3,14 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
-let collection = [numbers +" "+ userIds];
+// let collection = [numbers +" "+ userIds];
+let collection = [];
+for(let number in numbers){
+  collection.push(number);
+}
+for(let id in userIds){
+  collection.push(id);
+}
 console.log(collection)
 
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
@@ -49,8 +56,12 @@ console.log(oddCollection)
     times(0); // []
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
-let characterResult = [];
+
 function times(times = 1,character = "test") {
+  if(times < 1){
+    return [];
+  }
+  let characterResult = [];
   for(let i=0;i<times;i++){
     characterResult.push(character);
   }
@@ -77,7 +88,6 @@ console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-let result = [];
 
 // function revert(arr) {
 //   for(let i = 0; i = arr.length-[arr.length] ; i++){
@@ -87,6 +97,7 @@ let result = [];
 // }
 
 function revert(arr) {
+  let result = [];
   for(let i = arr.length-1; i >= 0 ; i--){
     result.push(arr[i]);
   }
@@ -110,9 +121,8 @@ console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
-let array = [];
-let resultClearArray = []
 function clear(clearArray) {
+  let resultClearArray = []
   for(let i = clearArray.length-1; i >= 0 ; i--){
     if(clearArray[i] == null || clearArray[i] == undefined || clearArray[i] == false || clearArray[i] == "" || clearArray[i] == 0){
       clearArray.pop(i);
@@ -122,6 +132,20 @@ function clear(clearArray) {
   }
   return resultClearArray;
 }
+
+// function isNotRequired(arrVal){
+//   return (arrVal == null || arrVal == undefined || arrVal == false || arrVal == "" || arrVal == 0);
+// }
+
+// function clear(arr){
+//   let final = []
+//   for(let arrVal in arr){
+//     if(isNotRequired(arrVal)){
+//       final.push(arrVal);
+//     }
+//   }
+//   return final;
+// }
 
 
 // Uncomment the code below and test the output
@@ -143,8 +167,8 @@ console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan'
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-let finalObj = {}
 function arrayToObj(arry) {
+  let finalObj = {}
   for(let i = 0; i < arry.length; i++){
     finalObj[i] = arry[i];
   }

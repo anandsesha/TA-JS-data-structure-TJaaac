@@ -131,8 +131,12 @@ var questions = [
 
 // Your code goes here
 let questionClone = [
-  {...questions[0], ...questions[0].responses}
-  {...questions[1],...questions[1].responses}
+  {...questions[0],
+   responses: [...questions[0].responses]
+  }
+  {...questions[1],
+    responses: [...questions[1].responses]
+  }
 ];
 ```
 
@@ -233,7 +237,7 @@ let clonedPerson = [
 
 ```js
 function cloneObject(obj) {
-  
+  return JSON.parse(JSON.stringify(obj));
 }
 
 // Run the test below to check your function
